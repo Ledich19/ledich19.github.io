@@ -40,7 +40,7 @@ class Info {
                 <span class="${this.icon} info_icon"></span>
                 <div class="info_header">
                     <div class="info_header_name">${this.name}<br><span>${this.personage}</span></div>
-                    <div class="info_header_complexityy">${this.complexity}</div>
+                    <div class="info_header_complexityy">СЛОЖНОСТЬ<br>${this.complexity}</div>
                 </div>
                 <img src=${this.photo} alt="${this.personage}">
                 <div class="info_descr">${this.descr}</div>

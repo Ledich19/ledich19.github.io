@@ -72,9 +72,7 @@ font-weight: bold;
 .popularity, .usedBy {
     margin-top: 10px;
 }
-.info_header_complexity {
-    color: rgb(255, 134, 20);
-}
+
 .info img {
     display: block;
     margin: 0 auto;
