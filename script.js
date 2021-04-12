@@ -1,14 +1,14 @@
 'use strict'
 const answers = document.querySelector('.wrapper_answer');
 const
-    PYTHON = [ 'icon-python', 'PYTHON', 'Энт', 1, './Images/ent.jpg', 'Помогает иаленьким хоббитам (начинающим) разобратся в принцыпах програмированияю.<br> Помогает магам (ученым програмистам) проводить иследования ',4, 'Youtube, Instagram, Spotify'],
+    PYTHON = [ 'icon-python', 'PYTHON', 'Энт', 1, './Images/ent.jpg', 'Помогает иаленьким хоббитам (начинающим) разобратся в принцыпах програмированияю.<br><br> Помогает магам (ученым програмистам) проводить иследования ',4, 'Youtube, Instagram, Spotify'],
     JAVA = ['icon-java', 'JAVA', 'Гендальф', 3, './Images/gen.jpg', 'Несет мир и работает везде кросплатформенный', 5 , 'mail, Minecraft, Большынство Android приложений, корпоративные приложения'],
-    C = ['icon-c', 'C', 'Кольцо', 3, './Images/ring.jpg', 'Сила С известна всем <br> все хотят обладать этой силой',5, 'Операционные системы и оборудование'],
-    PHP = [ 'icon-php', 'PHP',2 , 'Орк', './Images/orc.jpg', 'Малопривлекательный парень (язык).Не уважает правила (противоречив и непредсказуем) <br> Да все еще доминирует в Средеземье (Самый популярный язык для Web разработки)', 4,'Wordpres, Wikipedia'],
-    CPLUSPLUS = ['icon-cplusplus', 'C++', 'Саруман',4, './Images/sarjpg.jpg', 'Все думают что он отличный парень <br> Но стоит узнать его полутше, становится ясно его интересует могущество, а не добрые дела',4,'Операционные системы, оборудование и браузеры' ],
-    JAVASCRIPT = ['icon-javascript','JAVASCRIPT', 'Хоббит',2, './Images/hob.jpg', 'Немного обрезаный (в плане мощности) <br> Известен своей спокойной размеренной в Шыре (web браузере)',4, 'Paypal, front-end', 'большинства сайтов'],
+    C = ['icon-c', 'C', 'Кольцо', 3, './Images/ring.jpg', 'Сила С известна всем <br><br> все хотят обладать этой силой',5, 'Операционные системы и оборудование'],
+    PHP = [ 'icon-php', 'PHP',2 , 'Орк', './Images/orc.jpg', 'Малопривлекательный парень (язык).Не уважает правила (противоречив и непредсказуем) <br><br> Да все еще доминирует в Средеземье (Самый популярный язык для Web разработки)', 4,'Wordpres, Wikipedia'],
+    CPLUSPLUS = ['icon-cplusplus', 'C++', 'Саруман',4, './Images/sarjpg.jpg', 'Все думают что он отличный парень <br><br> Но стоит узнать его полутше, становится ясно его интересует могущество, а не добрые дела',4,'Операционные системы, оборудование и браузеры' ],
+    JAVASCRIPT = ['icon-javascript','JAVASCRIPT', 'Хоббит',2, './Images/hob.jpg', 'Немного обрезаный (в плане мощности) <br><br> Известен своей спокойной размеренной в Шыре (web браузере)',4, 'Paypal, front-end', 'большинства сайтов'],
     CSHARP = ['icon-csharp', 'C#', 'Эльф', 3,'./Images/fary.jpg', 'Прекрасные создания (язык) жили в своей стране Ривенделл (платформа Microsoft). Однако, совсем недавно, открыли свое общество для соседей (open sourse)'],
-    RUBY = ['icon-rubygems', 'RUBY', 'Человек(Средеземье)',2 ,'./Images/hum.jpg','Очень эмоциональное создание <br> Уверены что они (Некоторые Ruby разработчики) особенные, и должны управлять Средеземьем', 3, 'Hulu, Groupon, Slideshare'],
+    RUBY = ['icon-rubygems', 'RUBY', 'Человек(Средеземье)',2 ,'./Images/hum.jpg','Очень эмоциональное создание <br><br> Уверены что они (Некоторые Ruby разработчики) особенные, и должны управлять Средеземьем', 3, 'Hulu, Groupon, Slideshare'],
     SWIFT = ['icon-swift', 'SWIFT', 'Смауг', 3, './Images/smoug.jpg', 'Одинок и алчен', 3, 'Большынство IOS приложений и Mac OS']
 
 class Info {
@@ -76,8 +76,6 @@ class Info {
 
 function createQueshtion(queshtion, ...answer) {
     document.querySelector('.queshtion').innerHTML = `${queshtion}`;
-    console.log(...answer);
-
     answer.forEach(e => {
         answers.insertAdjacentHTML('beforeend', `<a class="answer">${e}</a>`);
     });
@@ -86,7 +84,6 @@ function createQueshtion(queshtion, ...answer) {
 answers.addEventListener('click', (e) => {
     if (e.target.classList.contains('answer')) {
         e.preventDefault()
-        console.log(e.target.text);
         answers.innerHTML = '';
         sww(e.target.text);
     }
@@ -143,9 +140,9 @@ function sww(params) {
         new Info(...JAVA).createCard();
     } else if (params == 'Отстой') {
         new Info(...JAVA).createCard();
-    } else if (params == 'да') {
+    } else if (params == 'Да') {
         new Info(...JAVASCRIPT).createCard();
-    } else if (params == 'нет') {
+    } else if (params == 'Нет') {
         createQueshtion('Ваша любимая игрушка', 'Lego', 'Пластилин', 'У меня старая уродливая игрушка но я ее обожаю');
     } else if (params == 'Не уверен') {
         createQueshtion('Ваша любимая игрушка', 'Lego', 'Пластилин', 'У меня старая уродливая игрушка но я ее обожаю');
@@ -158,7 +155,7 @@ function sww(params) {
     } else if (params == 'Android') {
         new Info(...JAVA).createCard();
     } else if (params == 'под WEB') {
-        createQueshtion('Ваше приложение работает в реальном времени , как твитер ?', 'да', 'Не так');
+        createQueshtion('Ваше приложение работает в реальном времени , как твитер ?', 'Да', 'Не так');
     } else if (params == 'Не так') {
         createQueshtion('Хотите опробовать чтото новое с большим потенциалом, но менее надежное', 'Да', 'Нет', 'Не уверен');
     } else if (params == 'У меня старая уродливая игрушка но я ее обожаю') {
