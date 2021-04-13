@@ -9,7 +9,7 @@ document.querySelector('#kingButton').addEventListener('click', () => {
         PHP = [ 'icon-php', 'PHP',2 , 'Орк', './Images/orc.jpg', 'Малопривлекательный парень (язык).Не уважает правила (противоречив и непредсказуем) <br><br> Да все еще доминирует в Средеземье (Самый популярный язык для Web разработки)', 4,'Wordpres, Wikipedia'],
         CPLUSPLUS = ['icon-cplusplus', 'C++', 'Саруман',4, './Images/sarjpg.jpg', 'Все думают что он отличный парень <br><br> Но стоит узнать его полутше, становится ясно его интересует могущество, а не добрые дела',4,'Операционные системы, оборудование и браузеры' ],
         JAVASCRIPT = ['icon-javascript','JAVASCRIPT', 'Хоббит',2, './Images/hob.jpg', 'Немного обрезаный (в плане мощности) <br><br> Известен своей спокойной размеренной в Шыре (web браузере)',4, 'Paypal, front-end', 'большинства сайтов'],
-        CSHARP = ['icon-csharp', 'C#', 'Эльф', 3,'./Images/fary.jpg', 'Прекрасные создания (язык) жили в своей стране Ривенделл (платформа Microsoft). Однако, совсем недавно, открыли свое общество для соседей (open sourse)'],
+        CSHARP = ['icon-csharp', 'C#', 'Эльф', 3,'./Images/fary.jpg', 'Прекрасные создания (язык) жили в своей стране Ривенделл (платформа Microsoft). Однако, совсем недавно, открыли свое общество для соседей (open sourse)', 4,'Корпоративные и Windows приложения' ],
         RUBY = ['icon-rubygems', 'RUBY', 'Человек(Средеземье)',2 ,'./Images/hum.jpg','Очень эмоциональное создание <br><br> Уверены что они (Некоторые Ruby разработчики) особенные, и должны управлять Средеземьем', 3, 'Hulu, Groupon, Slideshare'],
         SWIFT = ['icon-swift', 'SWIFT', 'Смауг', 3, './Images/smoug.jpg', 'Одинок и алчен', 3, 'Большынство IOS приложений и Mac OS']
     
@@ -115,7 +115,7 @@ document.querySelector('#kingButton').addEventListener('click', () => {
         } else if (params == 'WEB') {
             createQueshtion('Какоое направление ?', 'backend', 'frontend');
         } else if (params == 'Энтерпрайз') {
-            createQueshtion('Как вы относитесь к майкрософт', 'Фанат', 'Ну норм...', 'Отстой');
+            createQueshtion('Как вы относитесь к Microsoft', 'Фанат', 'Ну норм...', 'Отстой');
         } else if (params == 'Мобильные') {
             createQueshtion('Какая ОС', 'IOS', 'Android');
         } else if (params == '3D/Игры') {
